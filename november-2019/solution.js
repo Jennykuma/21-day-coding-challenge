@@ -34,3 +34,17 @@ const interviewAnswer = (topic) => {
       return "QUACK!";
   }
 }
+
+// challenge #3
+const castVote = (name, votes) => {
+  if(name === "Tim") {
+    votes[0]++;
+  } else if (name === "Sally") {
+    votes[1]++;
+  } else {
+    votes[2]++;
+  }
+  
+  return votes;
+}
+
