@@ -58,7 +58,7 @@ const registerToVote = (name, unregisteredVoters) => {
 const chooseStations = (stations) => {
   let appropriateStations = [];
   for(let idx = 0; idx < stations.length; idx++) {
-    if(stations[idx][1] >= 20 && (stations[idx][2] != 'restaurant')) {
+    if((stations[idx][1] >= 20) && (stations[idx][2] != 'restaurant')) {
       appropriateStations.push(stations[idx][0]);
     }
   }
