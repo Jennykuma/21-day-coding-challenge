@@ -37,9 +37,9 @@ const interviewAnswer = (topic) => {
 
 // challenge #3
 const castVote = (name, votes) => {
-  if(name === "Tim") {
+  if(name === 'Tim') {
     votes[0]++;
-  } else if (name === "Sally") {
+  } else if (name === 'Sally') {
     votes[1]++;
   } else {
     votes[2]++;
@@ -53,3 +53,15 @@ const registerToVote = (name, unregisteredVoters) => {
   unregisteredVoters = unregisteredVoters.filter(x => x !== name);
   return unregisteredVoters;
 }
+
+// challenge #5
+const chooseStations = (stations) => {
+  let appropriateStations = [];
+  for(let idx = 0; idx < stations.length; idx++) {
+    if(stations[idx][1] >= 20 && (stations[idx][2] != 'restaurant')) {
+      appropriateStations.push(stations[idx][0]);
+    }
+  }
+  return appropriateStations;
+}
+
