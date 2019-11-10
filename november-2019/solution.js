@@ -65,3 +65,47 @@ const chooseStations = (stations) => {
   return appropriateStations;
 }
 
+// challenge #6
+const voterTurnout = (voter_signatures, voter_ids) => {
+  if(voter_signatures.length !== voter_ids.length) { return false; }
+    
+  for(let i = 0; i < voter_ids.length; i++) {
+    if(voter_ids[i] !== voter_signatures[i]) {
+      return "FRAUD!";
+    }
+  }
+  return "All clear, we can count the votes!";
+}
+
+// challenge #7
+const termTopics = (interviews) => {
+  var topicCount = {
+    'smart city': 0,
+    'arts funding': 0,
+    'transportation': 0
+  };
+    
+  for(let i = 0; i < interviews.length; i++) {
+    if (topicCount[interviews[i]] !== undefined) {
+      ++topicCount[interviews[i]];
+    }
+  }
+  
+  return Object.values(topicCount);
+}
+
+// challenge #8
+const smartGarbage = (trash, bins) => {
+    ++bins[trash];
+    return bins;
+}
+
+// challenge #9
+const carPassing = (cars, speed) => {
+  var currentCar = {
+    'time': Date.now(),
+    'speed': speed
+  };
+  cars.push(currentCar);
+  return cars;
+}
