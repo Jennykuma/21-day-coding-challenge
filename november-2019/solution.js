@@ -131,3 +131,10 @@ const whereCanIPark = (spots, vehicle) => {
 }
 
 // challenge #11
+const busTimes = buses => {
+  var busTimesObj = {};
+  for(const bus in buses) {
+    busTimesObj[bus] = (buses[bus].distance / buses[bus].speed);
+  }
+  return busTimesObj;
+}
