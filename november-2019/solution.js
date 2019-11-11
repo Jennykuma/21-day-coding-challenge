@@ -109,3 +109,25 @@ const carPassing = (cars, speed) => {
   cars.push(currentCar);
   return cars;
 }
+
+// challenge #10
+const whereCanIPark = (spots, vehicle) => {
+  const regular = ['R'];
+  const small = ['R', 'S'];
+  const motorcycle = ['R', 'S', 'M'];
+  
+  for(let row = 0; row < spots.length; row++) {
+    for(let col = 0; col < spots[row].length; col++) {
+      if(vehicle === 'regular' && regular.includes(spots[row][col])) {
+        return [col, row];
+      } else if (vehicle === 'small' && small.includes(spots[row][col])) {
+        return [col, row];
+      } else if(vehicle === 'motorcycle' && motorcycle.includes(spots[row][col])) {
+        return [col, row];
+      }
+    }
+  }
+  return false;
+}
+
+// challenge #11
