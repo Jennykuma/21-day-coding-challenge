@@ -201,19 +201,12 @@ const festivalColours = color1 => {
 // challenge #17
 const judgeVegetable = (vegetables, metric) => {
   let highest = 0;
-  let submitter = '';
+  let idx = 0;
   for(let i = 0; i < vegetables.length; i++) {
-    if (metric === 'redness') {
-      if (vegetables[i].redness > highest) {
-        highest = vegetables[i].redness;
-        submitter = vegetables[i].submitter;
-      }
-    } else {
-      if (vegetables[i].plumpness > highest) {
-        highest = vegetables[i].plumpness;
-        submitter = vegetables[i].submitter;
-      }
+    if(vegetables[i][metric] > highest) {
+      highest = vegetables[i][metric];
+      idx = i;
     }
   }
-  return submitter;
+  return vegetables[idx].submitter;
 }
