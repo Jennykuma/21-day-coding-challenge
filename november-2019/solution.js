@@ -210,3 +210,39 @@ const judgeVegetable = (vegetables, metric) => {
   }
   return vegetables[idx].submitter;
 }
+
+// challenge #18
+const countTickets = (tickets) => {
+  let ticketCount = {
+    red: 0,
+    green: 0,
+    blue: 0
+  };
+  
+  for(let i = 0; i < tickets.length; i++) {
+    ticketCount[tickets[i]]++;
+  }
+  return ticketCount;
+}
+
+const bestOdds = (tickets, raffleEntries) => {
+  let ticketCount = countTickets(tickets);
+  let bestOdds = '';
+  let lowest = Number.MAX_SAFE_INTEGER;
+  
+  if (Math.abs(raffleEntries.red - ticketCount.red) < lowest) {
+    bestOdds = 'red';
+    lowest = Math.abs(raffleEntries.red - ticketCount.red);
+  } 
+  if (Math.abs(raffleEntries.green - ticketCount.green) < lowest) {
+    bestOdds = 'green';
+    lowest = Math.abs(raffleEntries.green - ticketCount.green);
+  }
+  if (Math.abs(raffleEntries.blue - ticketCount.blue) < lowest) {
+    bestOdds = 'blue';
+    lowest = Math.abs(raffleEntries.blue - ticketCount.blue);
+  }
+  
+  return "You have the best odds of winning the " + bestOdds + " raffle.";
+  
+}
