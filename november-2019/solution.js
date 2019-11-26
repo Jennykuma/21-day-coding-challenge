@@ -246,3 +246,20 @@ const bestOdds = (tickets, raffleEntries) => {
   return "You have the best odds of winning the " + bestOdds + " raffle.";
   
 }
+
+// challenge #19
+const pumpkinSpice = money => {
+  let result = [];
+  
+  let pie = Math.floor(money / 5);
+  let latte = Math.floor((money - (pie * 5)) / 3);
+  let macaron = Math.floor((money - (pie * 5) - (latte * 3)) / 1);
+  let grams = (pie * 30) + (latte * 15) + (macaron * 3);
+  
+  result[0] = pie;
+  result[1] = latte;
+  result[2] = macaron;
+  result[3] = grams;
+  
+  return result;
+}
