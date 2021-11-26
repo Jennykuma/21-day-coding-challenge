@@ -9,7 +9,12 @@ const generateAstronautTag = (astronaut) => {
 }
 
 // Challenge #3
-
 const checkGaugeStatus = (gauge) => {
   return gauge.min < gauge.current && gauge.current < gauge.max
+}
+
+// Challenge #4
+const switchToggle = (toggle) => {
+  toggle.isOn = !toggle.isOn
+  return toggle
 }
