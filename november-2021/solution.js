@@ -30,3 +30,13 @@ const addAstronautToRoster = (roster, astronaut) => {
   roster.push(astronaut)
   return roster
 }
+
+// Challenge #7
+const storeWeatherConditions = (temperature, condition, windSpeed, windDirection) => {
+  return {
+    temperature: Math.round((temperature - 32) * 5/9),
+    windSpeed: Math.round(windSpeed / 2.237),
+    windDirection,
+    condition
+  }
+}
