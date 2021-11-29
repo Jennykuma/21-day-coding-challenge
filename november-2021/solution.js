@@ -24,3 +24,9 @@ const addJobToAstronaut = (astronaut, job) => {
   astronaut.job = job
   return astronaut
 }
+
+// Challenge #6
+const addAstronautToRoster = (roster, astronaut) => {
+  roster.push(astronaut)
+  return roster
+}
