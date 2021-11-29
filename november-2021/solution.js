@@ -18,3 +18,9 @@ const switchToggle = (toggle) => {
   toggle.isOn = !toggle.isOn
   return toggle
 }
+
+// Challenge #5
+const addJobToAstronaut = (astronaut, job) => {
+  astronaut.job = job
+  return astronaut
+}
