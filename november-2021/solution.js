@@ -40,3 +40,8 @@ const storeWeatherConditions = (temperature, condition, windSpeed, windDirection
     condition
   }
 }
+
+// Challenge #8
+const countActiveAstronauts = (roster) => {
+  return roster.length
+}
