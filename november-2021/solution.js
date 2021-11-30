@@ -45,3 +45,8 @@ const storeWeatherConditions = (temperature, condition, windSpeed, windDirection
 const countActiveAstronauts = (roster) => {
   return roster.length
 }
+
+// Challenge #9
+const listAstronautJobs = (roster) => {
+  return roster.map(astronaut => astronaut.job)
+}
