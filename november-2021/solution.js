@@ -50,3 +50,8 @@ const countActiveAstronauts = (roster) => {
 const listAstronautJobs = (roster) => {
   return roster.map(astronaut => astronaut.job)
 }
+
+// Challenge #10
+const averageWindSpeed = (weatherEntries) => {
+  return Math.round(weatherEntries.reduce((acc,entry) => acc + entry.windSpeed, 0) / weatherEntries.length)
+}
