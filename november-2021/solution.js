@@ -55,3 +55,14 @@ const listAstronautJobs = (roster) => {
 const averageWindSpeed = (weatherEntries) => {
   return Math.round(weatherEntries.reduce((acc,entry) => acc + entry.windSpeed, 0) / weatherEntries.length)
 }
+
+// Challenge #11
+const bookFreePlatform = (platformList, missionDate) => {
+  for (const platform of platformList) {
+    if (platform.bookDate === undefined) {
+      platform.bookDate = missionDate
+      break;
+    }
+  }
+  return platformList
+}
