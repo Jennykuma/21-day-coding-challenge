@@ -66,3 +66,8 @@ const bookFreePlatform = (platformList, missionDate) => {
   }
   return platformList
 }
+
+// Challenge #12
+const parseTranscripts = (messages) => {
+  return messages.map(message => `${message.origin}: ${message.message}`)
+}
